@@ -1,3 +1,3 @@
 # hello-word! CTF Write-ups!
 
-[a relative link](PicoFrontPage.md)
+[PicoCTF 2019 Challenges](PicoFrontPage.md)
