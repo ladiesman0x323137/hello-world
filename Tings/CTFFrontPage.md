@@ -2,4 +2,4 @@
 
 ---
 
-[PicoCTF 2019 Challenges](PicoCTF2019/PicoFrontPage.md)
+[PicoCTF 2019 Challenges](PicoFrontPage.md)
