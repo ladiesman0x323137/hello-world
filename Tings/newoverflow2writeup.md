@@ -102,16 +102,16 @@ To search for specific ROP instructions:
 E.g. `ropper -f ./vuln --search "pop rdi"`
 
 <!-- Insert pop rdi image here -->
-![Pop RDI](../Images/PicoCTF2019/NewOverflow2poprdi.jpg)
+![Pop RDI](../Images/PicoCTF2019/NewOverflow2poprdi.JPG)
 
 However, I could not find a relevant instruction that included the `rbx` register.
 So, I tried to skip directly to the addresses that set `win1` and `win2` variables to `true`.
 
 <!-- Insert Disassembler image here -->
-![win_fn1 disas](../Images/PicoCTF2019/NewOverflow2winfn1disas.jpg)
+![win_fn1 disas](../Images/PicoCTF2019/NewOverflow2winfn1disas.JPG)
 
 <!-- Insert Disassembler image here -->
-![win_fn2 disas](../Images/PicoCTF2019/NewOverflow2winfn2disas.jpg)
+![win_fn2 disas](../Images/PicoCTF2019/NewOverflow2winfn2disas.JPG)
 
 I chained a bunch of `ret` instructions with the appropriate addresses and devised the appropriate script to execute.
 
