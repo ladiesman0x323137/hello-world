@@ -161,6 +161,12 @@ proc.sendline(payload)
 proc.interactive()
 ```
 
-Run the exploit and win.
+To run it through the pico2019 server you'll need the `ssh` feature:
+```python
+s = ssh(host='2019shell1.picoctf.com', user='YourUsername', password='YourPassword')
+p = s.process('AbsolutePathToProgram', cwd='TheWorkingDirectoryOfProgram')
+```
 
-[Overflow 2](overflow2writeup.md)
+Run the script and you should win.
+
+[Back](PicoFrontPage.md)  [Overflow 2](overflow2writeup.md)
