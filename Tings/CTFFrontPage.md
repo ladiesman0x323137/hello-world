@@ -1,5 +1,7 @@
-# hello-world!!! Random Write-ups!!!
+# hello-world!!!
 
 ---
 
-[PicoCTF 2019 Challenges](PicoFrontPage.md)
+## hello-world
+
+[Write Ups](WriteUpFrontPage.md)
