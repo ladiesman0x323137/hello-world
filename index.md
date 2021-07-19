@@ -3,4 +3,4 @@ Welcome!
 
 ---
 ## Posts
-[Write-Ups](Tings/CTFFrontPage.md)
+[Random Stuff](Tings/CTFFrontPage.md)
