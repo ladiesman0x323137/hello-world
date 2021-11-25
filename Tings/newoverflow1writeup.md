@@ -6,11 +6,6 @@
 ### Intro
 * You'll need to understand 64-bit calling conventions for this challenge
 
-### Tools
-* GEF-GDB
-* Pwntools - Python3
-* Ropper
-
 ### Source Code
 
 ```c

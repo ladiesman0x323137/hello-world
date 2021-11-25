@@ -3,11 +3,6 @@
 # Overflow 2
 ---
 
-### Tools
-* GEF-GDB
-* Pwntools - Python3
-* Your favourite text editor
-
 ### Source Code
 
 ```c

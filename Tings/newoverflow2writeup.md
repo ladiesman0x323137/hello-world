@@ -6,12 +6,6 @@
 ### Intro
 * You'll need to understand 64-bit calling conventions for this challenge
 
-### Tools Used
-* GEF-GDB
-* Pwntools
-* Favourite text editor
-* Ropper
-
 ### Source Code
 ```c
 bool win1 = false;

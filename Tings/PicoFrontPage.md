@@ -16,7 +16,6 @@ So, as I was saying, I'm leaving these for myself as a sort of notebook, and any
 * Cutter Disassembler
 * GEF-GDB
 * Pwntools
-* `ropper`
 
 ---
 ## Challenges Questions

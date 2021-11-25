@@ -6,11 +6,6 @@
 ### Intro
 Overflow 1 focuses on the stack, more specifically, how function calls work, and thus, how we can exploit them.
 
-### Tools
-* GEF-GDB
-* Pwntools - Python3
-* Your favourite text editor
-
 ### Source Code
 
 ```c

