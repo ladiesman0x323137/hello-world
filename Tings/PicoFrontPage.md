@@ -27,3 +27,9 @@ So, as I was saying, I'm leaving these for myself as a sort of notebook, and any
 [New Overflow 1](newoverflow1writeup.md)
 
 [New Overflow 2](newoverflow2writeup.md)
+
+[CanaRy](CanaRy.md)
+
+[GoT](GoT.md)
+
+[leap-frog](leap-frog.md)
