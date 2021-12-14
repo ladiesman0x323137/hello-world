@@ -16,7 +16,7 @@ Exploit-Education provides people with some beginner level pwn challenges to hel
 Some beginner-to-intermediate level challenges that focuses on mainly stack-related vulnerabilities. This challenge was great as a stepping block to learning more incredible things!
 
 ### Hackaday tutorials
-[Hackaday Tutorials](hackadaytutorialwriteups.md)
+[Hackaday Tutorials](hackadaytutorialstuff/hackadaytutorialwriteups.md)
 
 Some beginner tutorial challenges that helps people to get started with reverse engineering. A great learning to tool. Would
 highly recommend to those that want to get started.
