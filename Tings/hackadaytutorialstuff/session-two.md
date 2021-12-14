@@ -92,7 +92,6 @@ In these lines, the value(s) of `av` will be stored inside register `rax`.
 This means that it will be accessing the value after the executable name. That value will then be moved (`mov`) into
 register `rax` which will then be stored inside register `rdi` to use as an argument for the function `atoi()`.
 
-<!-- man page image for atoi -->
 
 The man page shows us that `atoi()` converts a string to an integer.
 

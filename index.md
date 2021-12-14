@@ -8,3 +8,7 @@ Welcome!
 ---
 ### Posts
 [Random Stuff](Tings/CTFFrontPage.md)
+
+---
+### Resume
+[Resume](Resume.pdf)
