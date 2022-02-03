@@ -56,7 +56,7 @@ Through trial and error, I calculated that a value of 102 *z*'s would land very 
 From there if we add one more character we could find a value that would be able to complete the input.
 I was able to calculate this as the ASCII character *E* and outcome with a final value of ***12513***.
 
-I thought that actually typing in 103 characters would be infeasible, so I used Pwntools to enter it for me.
+I thought that actually typing in 103 characters would be infeasible, so I used Pwntools.
 
 ### Solution
 
@@ -96,9 +96,9 @@ p.interactive()
 
 ## PleaseCrackMe
 
-Author: RaphDev
-Difficulty: 1.4/5
-Platform: Unix/Linux etc.
+- Author: RaphDev
+- Difficulty: 1.4/5
+- Platform: Unix/Linux etc.
 
 ### Tools
 
@@ -155,9 +155,12 @@ Shift each letter of the `username` by `user_number` positions in the alphabet t
 For e.g., we have `username` of `wer` with a key (`user_number`) of `5`.
 
 abcdefghijklmnopqrstuvwxyz
-fghi**j**klmnopqrstuv**w**xyza**b**cde
 
-The `user_password` will then be: `bjw`.
+fghijklmnopqrstuvwxyz{|}~[DEL]
+
+Easy-to-read ASCII conversion charts can be found online.
+
+The `user_password` will then be: `|jw`.
 
 Thus, is the Caesar Cipher.
 
