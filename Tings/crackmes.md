@@ -156,9 +156,11 @@ Shift each letter of the `username` by `user_number` positions in the alphabet t
 
 For e.g., we have `username` of `wer` with a key (`user_number`) of `5`.
 
+```
 abcdefghijklmnopqrstuvwxyz
 
 fghijklmnopqrstuvwxyz{|}~[DEL]
+```
 
 Easy-to-read ASCII conversion charts can be found online.
 
