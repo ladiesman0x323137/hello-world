@@ -84,6 +84,8 @@ payload = b'z'*102 + b'E'
 # len = -10*103 + 0x34e7 = 12513
 # var_10h = 122*102 + 1*69 = 12513
 
+p.recvuntil(b'Enter License: ')
+
 p.sendline(payload)
 
 recvmsg = p.recvall()
